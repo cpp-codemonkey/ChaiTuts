@@ -1,0 +1,83 @@
+def callMemberFunc(obj, x)
+{
+	return obj.sum(x);
+}
+
+def callOverloadedMemberFunc(obj, x)
+{
+	return obj.overload(x);
+}
+
+def getBaseData(obj)
+{
+	return obj.data;
+}
+
+def constructAnAccumulator()
+{
+	var a = Accumulator(50);
+	var x = a.data;
+	return a.sum(x);
+}
+
+def constructAMultiplier()
+{
+	var a = Multiplier(10);
+	var x = a.data;
+	return a.sum(x);
+}
+
+def callCppLambda(b)
+{
+	return cppLambda(b);
+}
+
+def callChaiLambda(b)
+{
+	var lambda = fun(type)
+	{
+		if (type)
+		{
+			return "true"
+		}
+		else
+		{
+			return "false";
+		}
+	}
+	return lambda(b);
+}
+
+def chaiLambdaCapture(b)
+{
+	var lambda = fun[b]()
+	{
+		if (b)
+		{
+			return "true"
+		}
+		else
+		{
+			return "false";
+		}
+	}
+	return lambda();
+}
+
+def getVector(int N)
+{
+	var vec = Vector();
+	for (var x = 0; x < N; ++x)
+	{
+		vec.push_back(x);
+	}
+	return vec;
+}
+
+def passVector(v)
+{
+	for (var x = 0; x != v.size(); ++x)
+	{
+		print(v[x]);
+	}
+}
